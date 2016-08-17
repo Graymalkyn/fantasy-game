@@ -1,17 +1,22 @@
 'use strict';
 if (this.AppName === undefined) this.AppName = {};
 
-
-
 (function(context) {
 
+  var $redName = $('.red-dude-all .dude-name');
+  var $blueName = $('.blue-dude-all .dude-name');
+
   function generateCombatants() {
-    var redNameList = ['red raider', 'red roscoe', 'red ryder', 'ralph'];
-    var blueNameList = ['blue bomber', 'blue blazer', 'blue marlin', 'bob'];
-    var randomRedName = Math.floor(Math.random() * redNameList.length);
-    // console.log(redNameList[randomRedName]);
-    var randomBlueName = Math.floor(Math.random() * blueNameList.length);
-    // console.log(blueNameList[randomBlueName]);
+
+    var redNameList = ['Red Raider', 'Red Roscoe', 'Red Ryder', 'Ralph', 'Rudolph the Red'];
+    var randomRedNameIndex = Math.floor(Math.random() * redNameList.length);
+    var randomRedName = redNameList[randomRedNameIndex];
+    $redName.text(randomRedName);
+
+    var blueNameList = ['Blue Bomber', 'Blue Blazer', 'Blue Marlin', 'Bob', 'Bucky the Barbarian'];
+    var randomBlueNameIndex = Math.floor(Math.random() * blueNameList.length);
+    var randomBlueName = blueNameList[randomBlueNameIndex];
+    $blueName.text(randomBlueName);
 
   }
 
@@ -24,10 +29,7 @@ if (this.AppName === undefined) this.AppName = {};
     var blueRandomHp = getRandom(5,10);
 
     var redGuyHp = redRandomHp;
-    console.log(redGuyHp)
-
     var blueGuyHp = blueRandomHp;
-    console.log(blueGuyHp)
 
   }
 
