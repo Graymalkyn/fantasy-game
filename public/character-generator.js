@@ -11,7 +11,7 @@ if (this.FantaSmash === undefined) this.FantaSmash = {};
   }
 
   function generateBlueName(){
-      var blueNameList = ['Blue Bomber', 'Blue Blazer', 'Blue Marlin', 'Bob', 'Bucky the Barbarian', 'Zen Master', 'The Agent', 'Roscoe P. Coaltrain',];
+      var blueNameList = ['Blue Bomber', 'Blue Blazer', 'Blue Marlin', 'Bob', 'Bucky the Barbarian', 'Zen Master', 'Agent X', 'Roscoe P. Coaltrain',];
       var randomBlueNameIndex = Math.floor(Math.random() * blueNameList.length);
       var randomBlueName = blueNameList[randomBlueNameIndex];
       return randomBlueName;
