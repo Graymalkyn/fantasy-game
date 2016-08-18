@@ -2,38 +2,24 @@ if (this.FantaSmash === undefined) this.FantaSmash = {};
 
 (function(context) {
 
-  function generateRedName() {
-
-    var redNameList = ['Red Raider', 'Red Roscoe', 'Red Ryder', 'Ralph', 'Rudolph the Red', 'Kung Fury', 'NEO', 'Duke',];
-    var randomRedNameIndex = Math.floor(Math.random() * redNameList.length);
-    var randomRedName = redNameList[randomRedNameIndex];
-    return randomRedName;
+  function generateName() {
+    var NameList = ['Ralph', 'Rudolph the Red', 'Kung Fury', 'NEO', 'Daisy Duke', 'Flash Gordon', 'The Dude', 'Bob', 'Bucky the Barbarian', 'Zen Master', 'Agent X', 'Roscoe P. Coaltrain', 'Ming the Merciless', 'The Self Soiler', 'Billy the Bully', 'Ragnarok', 'Valkyrie', 'Party Pooper', 'Underdog', 'Cosmic Cow'];
+    var randomNameIndex = Math.floor(Math.random() * NameList.length);
+    var randomName = NameList[randomNameIndex];
+    return randomName;
   }
 
-  function generateBlueName(){
-      var blueNameList = ['Blue Bomber', 'Blue Blazer', 'Blue Marlin', 'Bob', 'Bucky the Barbarian', 'Zen Master', 'Agent X', 'Roscoe P. Coaltrain',];
-      var randomBlueNameIndex = Math.floor(Math.random() * blueNameList.length);
-      var randomBlueName = blueNameList[randomBlueNameIndex];
-      return randomBlueName;
-    }
-
-  function getRandom (min, max) {
+  function generateHP(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
-  function generateRedHp(){
-    var redRandomHp = getRandom(5,10);
-    return redRandomHp;
-  }
+  function generateCharacter(){
+    var name = generateName();
+    var hp = generateHP(5,10);
 
-  function generateBlueHp(){
-    var blueRandomHp = getRandom(5,10);
-    return blueRandomHp;
-  }
+    return { name: name, hp: hp };
+ }
 
-  context.generateRedName = generateRedName;
-  context.generateBlueName = generateBlueName;
-  context.generateRedHp = generateRedHp;
-  context.generateBlueHp = generateBlueHp;
+  context.generateCharacter = generateCharacter;
 
 })(window.FantaSmash);

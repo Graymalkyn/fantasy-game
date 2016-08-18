@@ -12,37 +12,39 @@
         <h1> Fanta-Smash!!</h1>
 
         <div class="contenders">
+
           <div class="red-dude-all">
             <div class="sprite">
             </div>
             <div class="info">
-              <div class="dude-name">
-              </div>
-              <div class="dude-hp">
-              </div>
             </div>
           </div>
+
 
           <div class="blue-dude-all">
             <div class="sprite">
             </div>
             <div class="info">
-              <div class="dude-name">
-              </div>
-              <div class="dude-hp">
-              </div>
             </div>
           </div>
-        </div>
+
+        </div><!--contenders-->
         <div class="message">Insert message here!
         </div>
 
         <button class="start-button">Start
         </button>
 
+        <script type="text/html" class="character">
+            <li><%= name %></li>
+            <li><%= hp %></li>
+        </script>
+
+
 
       </div>
 
+      <script src="https://cdn.jsdelivr.net/lodash/4.15.0/lodash.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
       <script src="character-generator.js"></script>
       <script src="script.js"></script>
