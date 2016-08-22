@@ -49,12 +49,13 @@ body {
   background-image: url(concrete_seamless.png); }
 
 #container {
-  background-color: gray;
+  background-color: black;
   height: 1000px;
   width: 500px;
   margin: 0 auto; }
 
 h1 {
+  color: #ecb538;
   font-style: italic;
   font-size: 2.5em;
   font-weight: bold;
@@ -67,31 +68,63 @@ h1 {
   text-align: center; }
 
 .red-dude-all {
-  background-color: #d01011;
+  background-color: red;
+  color: white;
   height: 200px;
   width: 200px;
   float: left; }
 
 .blue-dude-all {
-  background-color: #1574f1;
+  background-color: blue;
+  color: white;
   height: 200px;
   width: 200px;
   float: right; }
 
-.sprite {
-  outline: 1px dashed yellow;
-  height: 100px;
-  width: 50px;
-  margin: 30px auto; }
-
 .message {
+  color: #ecb538;
   font-size: 1.5em;
   text-align: center;
   margin: 50px; }
 
 button {
   background-color: green;
+  color: white;
   font-size: 1.5em;
   padding: 5px 20px;
   display: block;
   margin: 0 auto; }
+
+.red-dude-all .sprite {
+  background-image: url(nes-final-fantasy-trans.png);
+  background-size: 800%;
+  margin: 25px auto;
+  height: 90px;
+  width: 60px;
+  transform: scaleX(-1); }
+
+.red-dude-all .red-dude-hurt {
+  background-position: -805px 0px;
+  transform: scaleX(-1); }
+
+.red-dude-all .red-dude-dead {
+  background-size: 500%;
+  background-position: -350px 0;
+  width: 87px;
+  transform: scaleX(-1); }
+
+.blue-dude-all .sprite {
+  background-image: url(nes-final-fantasy-trans.png);
+  background-size: 800%;
+  margin: 25px auto;
+  height: 90px;
+  background-position: -5px 94px;
+  width: 60px; }
+
+.blue-dude-all .blue-dude-hurt {
+  background-position: -805px 94px; }
+
+.blue-dude-all .blue-dude-dead {
+  background-size: 500%;
+  background-position: -350px 94px;
+  width: 87px; }
