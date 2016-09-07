@@ -75,9 +75,11 @@ if (this.FantaSmash === undefined) this.FantaSmash = {};
   function updateCombatantDisplay(){
 
     var templateHtml = $('.character').html();
+    console.log('templateHtml', templateHtml);
     templateFunk = _.template(templateHtml);
 
     html = templateFunk(redGuy);
+    console.log('html', html);
     $('.red-dude-all .info').html(html);
 
     html = templateFunk(blueGuy);
